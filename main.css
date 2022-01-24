@@ -1,0 +1,171 @@
+@font-face {
+    font-family: iranYekan;
+    src: url(fonts/IRANYekanRegularRd.ttf);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fafafa;
+    direction: rtl !important;
+    font-family: iranYekan !important;
+    text-align: right;
+    overflow-x: hidden;
+}
+.price {
+    display: flex;
+    position: absolute;
+    left: 10px;
+}
+.button-price {
+    display: flex;
+    align-items: center;
+}
+.add-btn {
+    font-family: iranYekan;
+    background-image: linear-gradient(333deg, rgb(43, 1, 121) 0%, rgb(43, 1, 121) 0%, rgb(121, 56, 242) 100%, rgb(121, 56, 242) 100%);
+    color: #ffffff;
+    border: none;
+    padding: 10px 17px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.product {
+    display: inline-block;
+    background-color: #ffffff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.info {
+    padding: 15px 10px;
+    position: relative;
+}
+.row {
+    justify-content: space-between;
+}
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: right;
+}
+.picture img {
+    width: 100%;
+}
+.topmenu {
+    list-style: none;
+    margin-right: 249px;
+}
+.menu-li a {
+    color: black;
+    padding: 9px;
+    font-size: 0.9rem;
+}
+.menu-li:hover a {
+    text-decoration: none;
+    color: #ffffff;
+    background-image: linear-gradient(333deg, rgb(43, 1, 121) 0%, rgb(43, 1, 121) 0%, rgb(121, 56, 242) 100%, rgb(121, 56, 242) 100%);
+    border-radius: 12px;
+}
+.container-fluid {
+    background-color: #ffffff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 25px 0 !important;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+i {
+    color: rgb(121, 56, 242);
+    font-size: 1.2rem;
+}
+.shop-icon {
+    position: absolute;
+    left: 89px;
+}
+.count {
+    background-color: #f13838;
+    color: #ffffff;
+    width: 20px;
+    border-radius: 50%;
+    height: 20px;
+    display: inline-block;
+    font-size: 0.8rem;
+    text-align: center;
+    position: relative;
+    right: 12px;
+    bottom: 15px;
+}
+.modal-custom {
+    width: 300px;
+    height: 250px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    position: fixed;
+    left: 37%;
+    top: -50%;
+    z-index: 200;
+}
+.show-modal {
+    animation: showModal 1s;
+    top: 30%;
+}
+.disappear-modal {
+    animation: disappearModal 1s;
+    top: -50%;
+}
+.modal-dialog {
+    text-align: right;
+}
+.total {
+    background-image: linear-gradient(333deg, rgb(43, 1, 121) 0%, rgb(43, 1, 121) 0%, rgb(121, 56, 242) 100%, rgb(121, 56, 242) 100%);
+    color: #ffffff;
+}
+.price span {
+    direction: ltr;
+}
+.modal-body {
+    overflow-y: auto;
+    max-height: 500px;
+}
+@keyframes showModal {
+    from {
+        top: -50%;
+    }
+    to {
+        top: 30%;
+    }
+}
+@keyframes disappearModal {
+    from {
+        top: 30%;
+    }
+    to {
+        top: -50%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .price {
+        left: 10px;
+    }
+    .title {
+        font-size: 1rem !important;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .shop-icon {
+        left: 0;
+    }
+    .shop-parent {
+        position: absolute !important;
+        left: 34px;
+        bottom: 7px;
+    }
+    .nav-child {
+        position: relative !important;
+    }
+    .modal-body {
+        max-width: 300px !important;
+    }
+}
